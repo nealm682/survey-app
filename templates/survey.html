@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Retiree Freelance Survey</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Retiree Freelance Survey</h2>
+        <form method="POST" action="/survey">
+            <label>What is your age range?</label><br>
+            <select name="age_range" required>
+                <option value="50-59">50-59</option>
+                <option value="60-69">60-69</option>
+                <option value="70-79">70-79</option>
+                <option value="80+">80+</option>
+            </select><br><br>
+
+            <label>What was your profession before retirement?</label><br>
+            <input type="text" name="profession" required><br><br>
+
+            <!-- Add other form fields similarly -->
+
+            <button type="submit">Submit Survey</button>
+        </form>
+    </div>
+</body>
+</html>
